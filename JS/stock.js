@@ -5,3 +5,5 @@ const productos = [
     {id: 4, nombre: "Camiseta", tipo: "Camiseta", cantidad: 1, desc: "tuki una camiseta", precio: 3000, img: './Imagenes/Camiseta2.jpg' },
     
 ]
+
+export { productos };

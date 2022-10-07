@@ -1,5 +1,9 @@
+import { validarProductoRepetido } from "./nuevoCarrito.js";
+import { productos } from './stock.js';
+
 const mostrarProductos = (productos) => {
     const contenedorProductos = document.getElementById('producto-contenedor')
+    
     productos.forEach(producto => {
         const div = document.createElement('div');
         div.classList.add('card');
@@ -16,12 +20,11 @@ const mostrarProductos = (productos) => {
 
         const boton = document.getElementById(`boton${producto.id}`);
         boton.addEventListener('click', ()=>{
-            carritoIndex(producto.id)
-            alert(`Se agrego ${producto.nombre} al carrito`)
+            validarProductoRepetido(producto.id);
         } )
 
     })
 
 }
 
-mostrarProductos(productos)
+mostrarProductos();
